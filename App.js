@@ -22,8 +22,6 @@ const App = () => {
     query();
   }, []);
 
-  console.log(posts);
-
   return (
     <>
       { showLoader ? <Loader /> : null}

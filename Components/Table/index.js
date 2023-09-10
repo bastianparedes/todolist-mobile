@@ -8,7 +8,7 @@ const Component = ({ posts, setPosts }) => {
     <View style={styles.container}>
       {posts.map((post) => (
         <Row
-          id={post.id}
+          key={post.id}
           post={post}
           setPosts={setPosts}
         />

@@ -16,6 +16,11 @@ const Component = ({ post, setPosts }) => {
     setPosts((previousState) => [...previousState]);
   };
 
+  const onChangeStatus = (newStatus) => {
+    post.status = newStatus;
+    setPosts((previousState) => [...previousState]);
+  }
+
   const onDelete = () => {
     setPosts((previousState) => {
       const newPosts = previousState.filter((postInList) => postInList.id !== post.id);
@@ -40,9 +45,7 @@ const Component = ({ post, setPosts }) => {
       </View>
       <SelectDropdown
         data={options}
-        onSelect={(selectedItem, index) => {
-          console.log(selectedItem, index)
-        }}
+        onSelect={onChangeStatus}
         defaultValue={post.status}
         defaultButtonText={post.status}
       />

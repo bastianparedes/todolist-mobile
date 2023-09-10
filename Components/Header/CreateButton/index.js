@@ -23,9 +23,8 @@ const Component = ({ setPosts }) => {
 
       return posts;
     });
-    
-    console.log('CREATE');
   }
+
   return (
     <Button
       onPress={onPressHandler}
